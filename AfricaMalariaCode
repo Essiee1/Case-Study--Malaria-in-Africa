@@ -1,0 +1,97 @@
+--MALARIA IN AFRICA CASE STUDY
+
+--Viewing the data
+SELECT *
+FROM malaria
+
+
+--Total malaria cases reported since 2017
+SELECT SUM(malaria_cases_reported)
+FROM malaria
+
+
+--Malaria progression from 2007-2017 in Africa
+SELECT country, year, malaria_incidence
+FROM malaria
+ORDER BY malaria_incidence ASC
+
+
+--Malaria progression from 2007-2017 in Nigeria
+SELECT country, year, malaria_incidence
+FROM malaria
+WHERE country = 'Nigeria'
+ORDER BY malaria_incidence DESC
+
+
+--Countries with the least incidence of malaria in 2017
+SELECT country, year, malaria_incidence
+FROM malaria
+WHERE year = 2017
+ORDER BY malaria_incidence ASC
+
+
+--Countries with the highest incidence of malaria in 2017
+SELECT country, year, malaria_incidence
+FROM malaria
+WHERE year = 2017
+ORDER BY malaria_incidence DESC
+
+
+--Countries and years with the highest incidence of malaria from 2007-2017
+SELECT country, year, MAX(malaria_incidence) malaria_incidence
+FROM malaria
+GROUP BY country, year
+ORDER BY malaria_incidence DESC
+
+
+--Countries with highest cases of malaria reported in 2017
+SELECT country, year, malaria_cases
+FROM malaria
+WHERE year = 2017
+ORDER BY malaria_cases DESC
+
+
+--Comparing top 5 incidence of malaria in 2017 with the cases reported in those countries
+SELECT country, year, malaria_incidence, malaria_cases_reported
+FROM malaria
+WHERE year = 2017
+ORDER BY malaria_incidence DESC
+LIMIT 5
+
+
+--Comparing incidence of malaria with percentage of people that use basic clean water
+SELECT country, year, malaria_incidence, basic_sanitation
+FROM malaria
+WHERE basic_sanitation NOTNULL
+ORDER BY malaria_incidence DESC
+
+
+--Comparing incidence of malaria with percentage of people that use basic sanitation
+SELECT country, year, malaria_incidence, basic_sanitation
+FROM malaria
+WHERE basic_sanitation NOTNULL
+ORDER BY malaria_incidence DESC
+
+
+--Comparing top 10 incidence of malaria in 2017 with usage of clean water and basic sanitation
+SELECT country, year, malaria_incidence, basic_sanitation, basic_water
+FROM malaria
+WHERE year = 2017 AND basic_sanitation NOTNULL AND basic_water NOTNULL
+ORDER BY malaria_incidence DESC
+LIMIT 10
+
+
+--Comparing least 5 incidence of malaria in 2017 with usage of clean water and basic sanitation
+SELECT country, year, malaria_incidence, basic_sanitation
+FROM malaria
+WHERE year = 2017 AND basic_sanitation NOTNULL AND basic_water NOTNULL
+ORDER BY malaria_incidence ASC
+
+
+
+--Comparing malaria incidence to percentage of people with access to
+--basic clean water and sanitation in Nigeria
+SELECT country, year, malaria_incidence, basic_water, basic_sanitation
+FROM malaria
+WHERE country = 'Nigeria'
+ORDER BY malaria_incidence DESC
