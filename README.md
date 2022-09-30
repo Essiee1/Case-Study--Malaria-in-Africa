@@ -1,6 +1,6 @@
 # Malaria in Africa
 
-This is the analysis carried out for my Course Google Data Analysis Project. It analyzes malaria trends in Africa from 2007-2017. It also checks for the correlation between the number of malaria cases reported and the percentage of people with access to basic clean water and sanitation.
+This is the analysis carried out for my Coursera Google Data Analysis Project. It analyzes malaria trends in Africa from 2007-2017. It also checks for the correlation between the number of malaria cases reported and the percentage of people with access to basic clean water and sanitation.
 
 
 ## Authors
@@ -24,7 +24,7 @@ This case study follows the 6 steps of data analysis:
 ## Scenario
 
 Africa is the second largest continent in the world. It also has the greatest malaria burden worldwide, especially the Sub-Saharan Africa. According to the World Health Organization, the estimated number of malaria deaths stood at 627,000 in 2020. Africa was home to 95% of the malaria cases and 96% of deaths. A major risk factor for this disease is poor environmental sanitation as this can provide a breeding ground for the mosquitoes.
-In this case study, we would be checking the trend of malaria in Africa from 2007-2017. We would also get insights on the correlation between the cases of malaria reported and the percentage of people with access to basic clean water and sanitation.
+In this case study, we would be studying the trend of malaria in Africa from 2007-2017. We would also get insights on the correlation between the cases of malaria reported and the percentage of people with access to basic clean water and sanitation.
 
 ## Ask
 
@@ -43,7 +43,7 @@ The data is from the world bank data source collected from all African countries
 The data on malaria incidence, malaria cases reported and women on Intermittent Malaria Preventive Therapy were retrieved from the world bank open data source. The longitude and latitude data were manually uploaded by the owner of the dataset.
 
 #### Comprehensive
-The day is not comprehensive as some of the columns have empty cells.
+The data is not comprehensive as some of the columns have empty cells.
 
 #### Current
 Data is not current as it was uploaded 2 years ago and it was collected from 2007-2017.
@@ -57,7 +57,7 @@ The data has some limitations due to the number of empty columns.
 
 ## Process
 
-The data was cleaned using Microsoft Excel.
+The data was cleaned using Microsoft Excel. The dataset was duplicated and analysis began with the duplicate dataset.
 
 The data was examined and nulls were noticed. Columns with a large number of nulls were removed as they had no relevance to the insights needed.
 
@@ -182,5 +182,5 @@ This analysis gave the same response as that of basic clean water. More insight 
 
 ## Act
 
-Although the incidence of malaria in Africa is reducing, it is still under the high side. Countries should increase the percentage of those with access to basic sanitation and clean water in order to see a decline in the malaria cases in their countries.
+Although the incidence of malaria in Africa is reducing, it is still on the high side. Seeing that there is a relationship (although not absolute) between malaria cases and access to clean water and sanitation, countries should increase the percentage of people with access to basic sanitation and clean water in order to see a decline in the malaria cases in their countries.
 
